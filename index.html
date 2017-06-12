@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <title>Minesweeper - Vue.js</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="minesweep.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
-    <script src="https://npmcdn.com/vue@1.0.26/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@2.3.4/dist/vue.min.js"></script>
   </head>
 
   <body>
     <div class="container">
       <div id="minesweep">
         <div class="controls">
-          <button @click="newGame()">New Game</button>
+          宽度：<input type="text" v-model.number="columns">
+          高度: <input type="text" v-model.number="rows">
+          雷数：<input type="text" v-model.number="mines">
+          <button @click="newGame()">开始</button>
         </div>
         <table class="minesweeper">
-          <tr v-for="(r,row) in tiles">
-            <td v-for="(c,tile) in row"
+          <tr v-for="(row,r) in tiles">
+            <td v-for="(tile,c) in row"
                 @click="openTile(r, c)"
                 @contextmenu.prevent="flagTile(r, c)"
                 :class="tile.classes">
             </td>
           </tr>
         </table>
+        <div id="info">{{result}}</div>
       </div>
     </div>
-    <footer>
-      <a href="https://github.com/PandaWhisperer/vue-minesweeper">
-        <i class="fa fa-github-square" title="View source on GitHub"></i>
-      </a>
-    </footer>
     </script>
     <script type="text/javascript" src="minesweep.js"></script>
   </body>

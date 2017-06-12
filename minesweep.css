@@ -19,6 +19,10 @@ footer a {
 .controls {
   text-align: center;
   padding-bottom: 1em;
+  color: white;
+}
+.controls input {
+  width: 50px;
 }
 table.minesweeper {
   margin: auto;
@@ -68,4 +72,10 @@ td.mine-neighbour-7 {
 }
 td.mine-neighbour-8 {
   background: url('img/8.svg');
+}
+#info {
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+  font-size: 2em;
 }

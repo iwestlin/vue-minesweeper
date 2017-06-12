@@ -1,9 +1,8 @@
 # Minesweeper
 
-This is a simple version of the classic Minesweeper game, implemented in [Vue.js][vue].
+forked from [PandaWhisperer/vue-minesweeper](https://github.com/PandaWhisperer/vue-minesweeper) for vue learning
 
-Credit for the [original (jQuery-based) version][original] goes to [Sebastian Saunier][@ssaunier].
-
-[@ssaunier]: https://github.com/ssaunier
-[original]: https://github.com/ssaunier/minesweeper
-[vue]: https://vuejs.org/
+add some function:
+- check win or lose
+- custom width, height and mines number
+- use vue@2.3.4
